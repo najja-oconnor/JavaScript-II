@@ -32,7 +32,7 @@ const counterMaker = () => {
   // 3- Return the `counter` function.
   return counter;
 };
-counterMaker = counter();
+counter() = counterMaker();
 myCounter();
 myCounter();
 // Example usage: const myCounter = counterMaker();
@@ -45,7 +45,15 @@ myCounter();
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {
+  increment: function  increment(num) {
+    let counter = 0;
+    return num++;
+  }
+  decrement: function decrement (num) {
+    return counter--;
+  }
   // Return an object that has two methods called `increment` and `decrement`.
   // `increment` should increment a counter variable in closure scope and return it.
   // `decrement` should decrement the counter variable and return it.
 };
+console.log(counterFactory());
