@@ -78,7 +78,7 @@ last(items, findLast)
     console.log(multiply) ;
   })
 
-  function isPresent(item, list) {
+  function contain (item, list) {
     for (let i = 0; i < list.length; i++) {
       if (list[i] === item) {
         return true;
